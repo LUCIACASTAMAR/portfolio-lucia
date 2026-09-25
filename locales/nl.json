@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "about": "Over mij",
+    "projects": "Projecten",
+    "education": "Opleiding",
+    "services": "Diensten",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "status": "Open voor mogelijkheden",
+    "role": "Informatica",
+    "title": "Webontwikkeling · AI · automatisering.",
+    "description": "Student Computer Engineering aan de UOC, gespecialiseerd in Informatiesystemen, met een achtergrond in databases, SQL en SAP S/4HANA + Data Migration.",
+    "projects": "Bekijk projecten",
+    "cv": "CV downloaden",
+    "contact": "Neem contact op"
+  },
+
+  "about": {
+    "label": "01 / Over mij",
+    "title": "Technologie met een zakelijke visie.",
+    "description": "Mijn profiel combineert technische opleiding, professionele ervaring en interesse in digitale transformatie.",
+    "extendedDescription": "Mijn profiel combineert technische opleiding, professionele ervaring en interesse in digitale transformatie. Ik ben geïnteresseerd in technologieconsulting, systeemtransformatie, Data Engineering en bedrijfsoplossingen.",
+    "areas": "Interessegebieden",
+    "learning": "Momenteel aan het leren"
+  },
+
+  "projects": {
+    "label": "02 / Portfolio",
+    "title": "Geselecteerde projecten.",
+    "view": "Project bekijken"
+  },
+
+  "education": {
+    "label": "03 / Opleiding",
+    "title": "Opleiding en continu leren."
+  },
+
+  "services": {
+    "label": "04 / Diensten",
+    "title": "Technologie toegepast op echte projecten.",
+    "web": "Webontwikkeling",
+    "webDescription": "Bedrijfswebsites, portfolio's en professionele digitale ervaringen.",
+    "ai": "Kunstmatige intelligentie",
+    "aiDescription": "AI-assistenten, API's en intelligente functionaliteiten geïntegreerd in webapplicaties.",
+    "automation": "Automatisering",
+    "automationDescription": "Automatisering van processen en digitale functionaliteiten om workflows te verbeteren."
+  },
+
+  "contact": {
+    "label": "05 / Contact",
+    "title": "Heb je een project?",
+    "description": "Laten we bespreken hoe we een digitale behoefte kunnen omzetten in een functionele oplossing.",
+    "contact": "Neem contact op",
+    "linkedin": "LinkedIn",
+    "email": "E-mail"
+  },
+
+  "system": {
+    "profile": "Profiel",
+    "currentFocus": "Huidige focus",
+    "digitalSolutions": "Digitale oplossingen",
+    "web": "WEB ONLINE",
+    "ai": "AI ACTIEF",
+    "automation": "AUTOMATISERING GEREED",
+    "learning": "CONTINU LEREN",
+    "status": "SYSTEEMSTATUS",
+    "stable": "STABIEL"
+  },
+
+  "footer": {
+    "rights": "Alle rechten voorbehouden.",
+    "tagline": "WEB · AI · AUTOMATISERING"
+  }
+}

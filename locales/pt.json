@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "about": "Sobre mim",
+    "projects": "Projetos",
+    "education": "Formação",
+    "services": "Serviços",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "status": "Disponível para oportunidades",
+    "role": "Engenharia Informática",
+    "title": "Desenvolvimento web · IA · automação.",
+    "description": "Estudante de Engenharia Informática na UOC, especializada em Sistemas de Informação, com formação em bases de dados, SQL e SAP S/4HANA + Data Migration.",
+    "projects": "Ver projetos",
+    "cv": "Descarregar CV",
+    "contact": "Contactar"
+  },
+  "about": {
+    "label": "01 / Sobre mim",
+    "title": "Tecnologia com visão de negócio.",
+    "description": "O meu perfil combina formação técnica, experiência profissional e interesse pela transformação digital.",
+    "extendedDescription": "O meu perfil combina formação técnica, experiência profissional e interesse pela transformação digital. Tenho interesse em consultoria tecnológica, transformação de sistemas, Data Engineering e soluções empresariais.",
+    "areas": "Áreas de interesse",
+    "learning": "A aprender atualmente"
+  },
+  "projects": {
+    "label": "02 / Portefólio",
+    "title": "Projetos selecionados.",
+    "view": "Ver projeto"
+  },
+  "education": {
+    "label": "03 / Formação",
+    "title": "Formação e aprendizagem contínua."
+  },
+  "services": {
+    "label": "04 / Serviços",
+    "title": "Tecnologia aplicada a projetos reais.",
+    "web": "Desenvolvimento web",
+    "webDescription": "Websites corporativos, portefólios e experiências digitais profissionais.",
+    "ai": "Inteligência artificial",
+    "aiDescription": "Assistentes, APIs e funcionalidades inteligentes integradas em aplicações web.",
+    "automation": "Automação",
+    "automationDescription": "Automação de processos e funcionalidades digitais para melhorar os fluxos de trabalho."
+  },
+  "contact": {
+    "label": "05 / Contacto",
+    "title": "Tem um projeto?",
+    "description": "Vamos falar sobre como transformar uma necessidade digital numa solução funcional.",
+    "contact": "Contactar",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+  "system": {
+    "profile": "Perfil",
+    "currentFocus": "Foco atual",
+    "digitalSolutions": "Soluções digitais",
+    "web": "WEB ONLINE",
+    "ai": "IA ATIVA",
+    "automation": "AUTOMAÇÃO PRONTA",
+    "learning": "APRENDIZAGEM CONTÍNUA",
+    "status": "ESTADO DO SISTEMA",
+    "stable": "ESTÁVEL"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "tagline": "WEB · IA · AUTOMAÇÃO"
+  }
+}

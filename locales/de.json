@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "projects": "Projekte",
+    "education": "Ausbildung",
+    "services": "Leistungen",
+    "contact": "Kontakt"
+  },
+
+  "hero": {
+    "status": "Offen für neue Möglichkeiten",
+    "role": "Informatikingenieurwesen",
+    "title": "Webentwicklung · KI · Automatisierung.",
+    "description": "Informatikstudentin an der UOC mit Spezialisierung auf Informationssysteme und Ausbildung in Datenbanken, SQL und SAP S/4HANA + Data Migration.",
+    "projects": "Projekte ansehen",
+    "cv": "Lebenslauf herunterladen",
+    "contact": "Kontakt aufnehmen"
+  },
+
+  "about": {
+    "label": "01 / Über mich",
+    "title": "Technologie mit Geschäftsperspektive.",
+    "description": "Mein Profil verbindet technische Ausbildung, Berufserfahrung und Interesse an der digitalen Transformation.",
+    "extendedDescription": "Mein Profil verbindet technische Ausbildung, Berufserfahrung und Interesse an der digitalen Transformation. Ich interessiere mich für Technologieberatung, Systemtransformation, Data Engineering und Unternehmenslösungen.",
+    "areas": "Interessensbereiche",
+    "learning": "Derzeit lerne ich"
+  },
+
+  "projects": {
+    "label": "02 / Portfolio",
+    "title": "Ausgewählte Projekte.",
+    "view": "Projekt ansehen"
+  },
+
+  "education": {
+    "label": "03 / Ausbildung",
+    "title": "Ausbildung und kontinuierliches Lernen."
+  },
+
+  "services": {
+    "label": "04 / Leistungen",
+    "title": "Technologie für reale Projekte.",
+    "web": "Webentwicklung",
+    "webDescription": "Unternehmenswebsites, Portfolios und professionelle digitale Erlebnisse.",
+    "ai": "Künstliche Intelligenz",
+    "aiDescription": "KI-Assistenten, APIs und intelligente Funktionen, integriert in Webanwendungen.",
+    "automation": "Automatisierung",
+    "automationDescription": "Automatisierung von Prozessen und digitalen Funktionen zur Verbesserung von Arbeitsabläufen."
+  },
+
+  "contact": {
+    "label": "05 / Kontakt",
+    "title": "Haben Sie ein Projekt?",
+    "description": "Lassen Sie uns darüber sprechen, wie wir einen digitalen Bedarf in eine funktionale Lösung verwandeln können.",
+    "contact": "Kontakt aufnehmen",
+    "linkedin": "LinkedIn",
+    "email": "E-Mail"
+  },
+
+  "system": {
+    "profile": "Profil",
+    "currentFocus": "Aktueller Fokus",
+    "digitalSolutions": "Digitale Lösungen",
+    "web": "WEB ONLINE",
+    "ai": "KI AKTIV",
+    "automation": "AUTOMATISIERUNG BEREIT",
+    "learning": "KONTINUIERLICHES LERNEN",
+    "status": "SYSTEMSTATUS",
+    "stable": "STABIL"
+  },
+
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "tagline": "WEB · KI · AUTOMATISIERUNG"
+  }
+}

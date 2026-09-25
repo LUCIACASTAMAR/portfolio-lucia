@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "education": "Education",
+    "services": "Services",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "status": "Open to opportunities",
+    "role": "Computer Engineering",
+    "title": "Web development · AI · automation.",
+    "description": "Computer Engineering student at UOC, specializing in Information Systems, with a background in databases, SQL and SAP S/4HANA + Data Migration.",
+    "projects": "View projects",
+    "cv": "Download CV",
+    "contact": "Contact me"
+  },
+
+  "about": {
+    "label": "01 / About",
+    "title": "Technology with a business perspective.",
+    "description": "My profile combines technical education, professional experience and an interest in digital transformation.",
+    "extendedDescription": "I combine technical education, professional experience and an interest in digital transformation. I am interested in technology consulting, systems transformation, Data Engineering and enterprise solutions.",
+    "areas": "Areas of interest",
+    "learning": "Currently learning"
+  },
+
+  "projects": {
+    "label": "02 / Portfolio",
+    "title": "Selected projects.",
+    "view": "View project"
+  },
+
+  "education": {
+    "label": "03 / Education",
+    "title": "Education and continuous learning."
+  },
+
+  "services": {
+    "label": "04 / Services",
+    "title": "Technology applied to real projects.",
+    "web": "Web development",
+    "webDescription": "Corporate websites, portfolios and professional digital experiences.",
+    "ai": "Artificial intelligence",
+    "aiDescription": "AI-powered assistants, APIs and intelligent functionality integrated into web applications.",
+    "automation": "Automation",
+    "automationDescription": "Process automation and digital functionality designed to improve workflows."
+  },
+
+  "contact": {
+    "label": "05 / Contact",
+    "title": "Do you have a project?",
+    "description": "Let's talk about how to turn a digital need into a functional solution.",
+    "contact": "Contact me",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+
+  "system": {
+    "profile": "Profile",
+    "currentFocus": "Current focus",
+    "digitalSolutions": "Digital solutions",
+    "web": "WEB ONLINE",
+    "ai": "AI ACTIVE",
+    "automation": "AUTOMATION READY",
+    "learning": "LEARNING CONTINUOUS",
+    "status": "SYSTEM STATUS",
+    "stable": "STABLE"
+  },
+
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "WEB · AI · AUTOMATION"
+  }
+}

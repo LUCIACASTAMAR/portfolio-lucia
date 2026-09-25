@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "about": "À propos",
+    "projects": "Projets",
+    "education": "Formation",
+    "services": "Services",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "status": "Ouverte aux opportunités",
+    "role": "Ingénierie informatique",
+    "title": "Développement web · IA · automatisation.",
+    "description": "Étudiante en ingénierie informatique à l'UOC, spécialisée en systèmes d'information, avec une formation en bases de données, SQL et SAP S/4HANA + Data Migration.",
+    "projects": "Voir les projets",
+    "cv": "Télécharger le CV",
+    "contact": "Me contacter"
+  },
+
+  "about": {
+    "label": "01 / À propos",
+    "title": "La technologie avec une vision business.",
+    "description": "Mon profil combine une formation technique, une expérience professionnelle et un intérêt pour la transformation numérique.",
+    "extendedDescription": "Mon profil combine une formation technique, une expérience professionnelle et un intérêt pour la transformation numérique. Je m'intéresse au conseil technologique, à la transformation des systèmes, à la Data Engineering et aux solutions d'entreprise.",
+    "areas": "Domaines d'intérêt",
+    "learning": "Actuellement en apprentissage"
+  },
+
+  "projects": {
+    "label": "02 / Portfolio",
+    "title": "Projets sélectionnés.",
+    "view": "Voir le projet"
+  },
+
+  "education": {
+    "label": "03 / Formation",
+    "title": "Formation et apprentissage continu."
+  },
+
+  "services": {
+    "label": "04 / Services",
+    "title": "La technologie appliquée à des projets réels.",
+    "web": "Développement web",
+    "webDescription": "Sites web d'entreprise, portfolios et expériences numériques professionnelles.",
+    "ai": "Intelligence artificielle",
+    "aiDescription": "Assistants, API et fonctionnalités intelligentes intégrés aux applications web.",
+    "automation": "Automatisation",
+    "automationDescription": "Automatisation des processus et fonctionnalités numériques pour améliorer les flux de travail."
+  },
+
+  "contact": {
+    "label": "05 / Contact",
+    "title": "Vous avez un projet ?",
+    "description": "Parlons de la manière de transformer un besoin numérique en une solution fonctionnelle.",
+    "contact": "Me contacter",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+
+  "system": {
+    "profile": "Profil",
+    "currentFocus": "Orientation actuelle",
+    "digitalSolutions": "Solutions numériques",
+    "web": "WEB EN LIGNE",
+    "ai": "IA ACTIVE",
+    "automation": "AUTOMATISATION PRÊTE",
+    "learning": "APPRENTISSAGE CONTINU",
+    "status": "ÉTAT DU SYSTÈME",
+    "stable": "STABLE"
+  },
+
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "tagline": "WEB · IA · AUTOMATISATION"
+  }
+}
