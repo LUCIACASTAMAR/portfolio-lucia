@@ -20,6 +20,11 @@ export const metadata: Metadata = {
 
   description: seoByLocale.es.description,
 
+  verification: {
+    google: "eh0fHRYi7eCZgFDVRG-ANiWlHPNoUMqwLixUwhVHuzw",
+  },
+
+
   authors: [
     {
       name: "Lucía Castañeda",
