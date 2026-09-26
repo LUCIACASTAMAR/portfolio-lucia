@@ -39,6 +39,14 @@ export async function generateMetadata({
       siteName: "Lucía Castañeda",
       title: seo.title,
       description: seo.description,
+       images: [
+    {
+      url: "/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: "Lucía Castañeda — Ingeniería Informática · Sistemas de Información",
+    },
+  ],
       locale:
         currentLocale === "es"
           ? "es_ES"

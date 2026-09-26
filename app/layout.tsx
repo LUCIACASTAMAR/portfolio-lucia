@@ -61,6 +61,16 @@ export const metadata: Metadata = {
     siteName: "Lucía Castañeda",
     title: seoByLocale.es.title,
     description: seoByLocale.es.description,
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lucía Castañeda — Ingeniería Informática · Sistemas de Información",
+      },
+    ],
+
     locale: "es_ES",
     alternateLocale: [
       "en_US",
@@ -77,6 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: seoByLocale.es.title,
     description: seoByLocale.es.description,
+    images: ["/og-image.png"],
   },
 
   robots: {

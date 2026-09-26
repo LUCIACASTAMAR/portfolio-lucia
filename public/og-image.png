@@ -1,0 +1,34 @@
+from PIL import Image
+from pathlib import Path
+
+src = Path("/mnt/data/a_sleek_professional_dark_themed_portfolio_hero.png")
+dest = Path("/mnt/data/og-image.png")
+
+img = Image.open(src).convert("RGB")
+target_w, target_h = 1200, 630
+
+# Crop to the Open Graph 1200×630 ratio, keeping the central content visible.
+target_ratio = target_w / target_h
+img_ratio = img.width / img.height
+
+if img_ratio > target_ratio:
+    new_w = int(img.height * target_ratio)
+    left = (img.width - new_w) // 2
+    img = img.crop((left, 0, left + new_w, img.height))
+else:
+    new_h = int(img.width / target_ratio)
+    top = (img.height - new_h) // 2
+    img = img.crop((0, top, img.width, top + new_h))
+
+img = img.resize((target_w, target_h), Image.Resampling.LANCZOS)
+img.save(dest, "PNG", optimize=True)
+
+# Also place the asset directly into the portfolio's public folder if the project is mounted.
+project_public = Path(r"C:\Users\lucyc\portfolio-lucy\public")
+if project_public.exists():
+    project_dest = project_public / "og-image.png"
+    img.save(project_dest, "PNG", optimize=True)
+    print(f"Creada y copiada al proyecto: {project_dest}")
+else:
+    print(f"Creada: {dest}")
+    print("No encontré la carpeta local del proyecto en este entorno; usa el archivo generado para copiarlo a public/og-image.png.")
