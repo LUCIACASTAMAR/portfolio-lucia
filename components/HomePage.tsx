@@ -43,6 +43,17 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
   const t = getTranslations(locale);
   const content = localizedContent[locale];
 
+  const pricingCopy = {
+    es: { from: "Desde", basic: "Web esencial", basicDesc: "Una web sencilla para empezar a tener presencia online.", basicFeatures: ["Una página con varias secciones", "Diseño adaptable a móvil", "Formulario o botón de contacto", "SEO técnico básico"], corporate: "Web corporativa", corporateDesc: "Una presencia digital más completa para tu negocio.", corporateFeatures: ["Varias páginas", "Diseño personalizado", "Sección de servicios y contacto", "Publicación y revisión final"], ai: "IA y automatización", aiDesc: "Funciones adicionales para ahorrar tiempo y mejorar la atención al cliente.", aiFeatures: ["Chatbot o automatización sencilla", "Integración en la web existente", "Pruebas y configuración", "Costes externos no incluidos"], quote: "Solicitar presupuesto", note: "Precios orientativos. El presupuesto final depende del alcance, el contenido y las funcionalidades. Dominio, alojamiento y servicios externos pueden tener costes adicionales." },
+    en: { from: "From", basic: "Essential website", basicDesc: "A simple website to establish your online presence.", basicFeatures: ["One page with multiple sections", "Mobile-friendly design", "Contact form or button", "Basic technical SEO"], corporate: "Corporate website", corporateDesc: "A more complete digital presence for your business.", corporateFeatures: ["Multiple pages", "Custom design", "Services and contact sections", "Launch and final review"], ai: "AI & automation", aiDesc: "Add-on features to save time and improve customer support.", aiFeatures: ["Simple chatbot or automation", "Integration into an existing website", "Setup and testing", "External costs not included"], quote: "Request a quote", note: "Indicative prices. Final quotes depend on scope, content and functionality. Domain, hosting and external services may cost extra." },
+    fr: { from: "À partir de", basic: "Site essentiel", basicDesc: "Un site simple pour établir votre présence en ligne.", basicFeatures: ["Une page avec plusieurs sections", "Design adapté au mobile", "Formulaire ou bouton de contact", "SEO technique de base"], corporate: "Site vitrine", corporateDesc: "Une présence numérique plus complète pour votre activité.", corporateFeatures: ["Plusieurs pages", "Design personnalisé", "Sections services et contact", "Mise en ligne et vérification finale"], ai: "IA et automatisation", aiDesc: "Des fonctionnalités supplémentaires pour gagner du temps et améliorer le service client.", aiFeatures: ["Chatbot ou automatisation simple", "Intégration au site existant", "Configuration et tests", "Coûts externes non inclus"], quote: "Demander un devis", note: "Prix indicatifs. Le devis final dépend du périmètre, du contenu et des fonctionnalités. Domaine, hébergement et services externes peuvent entraîner des frais supplémentaires." },
+    de: { from: "Ab", basic: "Basis-Website", basicDesc: "Eine einfache Website für Ihren professionellen Online-Auftritt.", basicFeatures: ["Eine Seite mit mehreren Abschnitten", "Mobilfreundliches Design", "Kontaktformular oder Kontaktbutton", "Technisches SEO-Basis-Setup"], corporate: "Unternehmenswebsite", corporateDesc: "Ein umfassenderer digitaler Auftritt für Ihr Unternehmen.", corporateFeatures: ["Mehrere Seiten", "Individuelles Design", "Leistungs- und Kontaktbereich", "Veröffentlichung und Abschlussprüfung"], ai: "KI und Automatisierung", aiDesc: "Zusatzfunktionen, die Zeit sparen und den Kundenservice verbessern.", aiFeatures: ["Einfacher Chatbot oder Workflow", "Integration in eine bestehende Website", "Einrichtung und Tests", "Externe Kosten nicht enthalten"], quote: "Angebot anfragen", note: "Richtpreise. Das endgültige Angebot hängt von Umfang, Inhalten und Funktionen ab. Domain, Hosting und externe Dienste können zusätzliche Kosten verursachen." },
+    it: { from: "Da", basic: "Sito essenziale", basicDesc: "Un sito semplice per iniziare a essere presenti online.", basicFeatures: ["Una pagina con più sezioni", "Design ottimizzato per dispositivi mobili", "Modulo o pulsante di contatto", "SEO tecnico di base"], corporate: "Sito aziendale", corporateDesc: "Una presenza digitale più completa per la tua attività.", corporateFeatures: ["Più pagine", "Design personalizzato", "Sezioni servizi e contatti", "Pubblicazione e revisione finale"], ai: "IA e automazione", aiDesc: "Funzionalità aggiuntive per risparmiare tempo e migliorare il servizio clienti.", aiFeatures: ["Chatbot o automazione semplice", "Integrazione nel sito esistente", "Configurazione e test", "Costi esterni esclusi"], quote: "Richiedi un preventivo", note: "Prezzi indicativi. Il preventivo finale dipende da ambito, contenuti e funzionalità. Dominio, hosting e servizi esterni possono comportare costi aggiuntivi." },
+    pt: { from: "Desde", basic: "Site essencial", basicDesc: "Um site simples para começar a ter presença online.", basicFeatures: ["Uma página com várias secções", "Design adaptado a dispositivos móveis", "Formulário ou botão de contacto", "SEO técnico básico"], corporate: "Site corporativo", corporateDesc: "Uma presença digital mais completa para o seu negócio.", corporateFeatures: ["Várias páginas", "Design personalizado", "Secções de serviços e contacto", "Publicação e revisão final"], ai: "IA e automação", aiDesc: "Funcionalidades adicionais para poupar tempo e melhorar o apoio ao cliente.", aiFeatures: ["Chatbot ou automação simples", "Integração no site existente", "Configuração e testes", "Custos externos não incluídos"], quote: "Pedir orçamento", note: "Preços indicativos. O orçamento final depende do âmbito, conteúdo e funcionalidades. Domínio, alojamento e serviços externos podem ter custos adicionais." },
+    nl: { from: "Vanaf", basic: "Essentiële website", basicDesc: "Een eenvoudige website om online zichtbaar te worden.", basicFeatures: ["Eén pagina met meerdere secties", "Mobielvriendelijk ontwerp", "Contactformulier of contactknop", "Basis technische SEO"], corporate: "Bedrijfswebsite", corporateDesc: "Een completere digitale aanwezigheid voor je bedrijf.", corporateFeatures: ["Meerdere pagina's", "Ontwerp op maat", "Diensten- en contactsecties", "Publicatie en eindcontrole"], ai: "AI en automatisering", aiDesc: "Extra functies om tijd te besparen en klanten beter te helpen.", aiFeatures: ["Eenvoudige chatbot of automatisering", "Integratie in een bestaande website", "Instellen en testen", "Externe kosten niet inbegrepen"], quote: "Offerte aanvragen", note: "Indicatieve prijzen. De definitieve offerte hangt af van de omvang, inhoud en functies. Domein, hosting en externe diensten kunnen extra kosten met zich meebrengen." },
+    ru: { from: "От", basic: "Базовый сайт", basicDesc: "Простой сайт для создания онлайн-присутствия.", basicFeatures: ["Одна страница с несколькими разделами", "Адаптация для мобильных устройств", "Форма или кнопка связи", "Базовая техническая SEO-настройка"], corporate: "Корпоративный сайт", corporateDesc: "Более полное цифровое представительство бизнеса.", corporateFeatures: ["Несколько страниц", "Индивидуальный дизайн", "Разделы услуг и контактов", "Публикация и финальная проверка"], ai: "ИИ и автоматизация", aiDesc: "Дополнительные функции для экономии времени и улучшения поддержки клиентов.", aiFeatures: ["Простой чат-бот или автоматизация", "Интеграция в существующий сайт", "Настройка и тестирование", "Внешние расходы не включены"], quote: "Запросить смету", note: "Ориентировочные цены. Итоговая стоимость зависит от объёма, контента и функций. Домен, хостинг и внешние сервисы могут оплачиваться отдельно." }
+  }[locale];
+
   const [activeTech, setActiveTech] = useState(0);
   const [languageOpen, setLanguageOpen] = useState(false);
   const languageRef = useRef<HTMLDivElement>(null);
@@ -669,51 +680,42 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
         id="services"
         className="relative z-10 border-t border-white/10 px-6 py-24 md:px-12"
       >
-
         <div className="mx-auto max-w-7xl">
-
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-white/30">
             {t.services.label}
           </p>
-
-          <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-3">
-
-            {[
-              {
-                title: t.services.web,
-                description: t.services.webDescription,
-              },
-              {
-                title: t.services.ai,
-                description: t.services.aiDescription,
-              },
-              {
-                title: t.services.automation,
-                description: t.services.automationDescription,
-              },
-            ].map((service) => (
-
-              <div
-                key={service.title}
-                className="bg-black p-8 transition hover:bg-white/[0.04]"
-              >
-
-                <h3 className="text-xl font-medium">
-                  {service.title}
-                </h3>
-
-                <p className="mt-5 text-sm leading-6 text-white/45">
-                  {service.description}
-                </p>
-
-              </div>
-
-            ))}
-
+          <div className="mt-5 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <h2 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
+              {t.services.title}
+            </h2>
+            <p className="max-w-md text-sm leading-6 text-white/45">
+              {pricingCopy.note}
+            </p>
           </div>
-
+          <div className="mt-12 grid gap-4 lg:grid-cols-3">
+            {[
+              { title: pricingCopy.basic, description: pricingCopy.basicDesc, price: "200 €", features: pricingCopy.basicFeatures, featured: true },
+              { title: pricingCopy.corporate, description: pricingCopy.corporateDesc, price: "500 €", features: pricingCopy.corporateFeatures, featured: false },
+              { title: pricingCopy.ai, description: pricingCopy.aiDesc, price: "150 € adicionales", features: pricingCopy.aiFeatures, featured: false },
+            ].map((service) => (
+              <article key={service.title} className={`flex flex-col rounded-2xl border p-7 md:p-8 transition-colors ${service.featured ? "border-white/35 bg-white/[0.055]" : "border-white/10 bg-black/60 hover:border-white/25"}`}>
+                {service.featured && <span className="mb-5 w-fit rounded-full border border-white/20 px-3 py-1 font-mono text-[9px] uppercase tracking-[0.15em] text-white/60">{pricingCopy.from} 200 €</span>}
+                <h3 className="text-xl font-medium">{service.title}</h3>
+                <p className="mt-3 min-h-[48px] text-sm leading-6 text-white/45">{service.description}</p>
+                <p className="mt-7">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/35">{pricingCopy.from}</span>
+                  <span className="mt-1 block text-4xl font-semibold tracking-tight">{service.price}</span>
+                </p>
+                <ul className="mt-7 flex-1 space-y-3 border-t border-white/10 pt-6">
+                  {service.features.map((feature) => <li key={feature} className="flex gap-3 text-sm text-white/55"><span className="text-white/60">—</span><span>{feature}</span></li>)}
+                </ul>
+                <a href={`mailto:${profile.contact?.email ?? "lucycastamar@gmail.com"}?subject=${encodeURIComponent(service.title)}`} className="mt-8 inline-flex items-center justify-center border border-white/20 px-5 py-3 text-sm font-medium transition-colors hover:bg-white hover:text-black">
+                  {pricingCopy.quote}<span className="ml-3" aria-hidden="true">↗</span>
+                </a>
+              </article>
+            ))}
+          </div>
         </div>
-
       </section>
 
       {/* =====================================================
