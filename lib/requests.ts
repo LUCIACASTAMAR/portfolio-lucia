@@ -53,15 +53,20 @@ export async function supabaseRequest(path: string, init: RequestInit = {}) {
   });
 }
 
-export async function sendNotificationEmail(subject: string, html: string) {
+export async function sendEmail(to: string, subject: string, html: string) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.RESEND_FROM_EMAIL;
-  const to = process.env.NOTIFICATION_EMAIL;
-  if (!apiKey || !from || !to) throw new Error("Email service is not configured");
+  if (!apiKey || !from) throw new Error("Email service is not configured");
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify({ from, to: [to], subject, html }),
   });
-  if (!response.ok) throw new Error("Email notification failed");
+  if (!response.ok) throw new Error("Email delivery failed");
+}
+
+export async function sendNotificationEmail(subject: string, html: string) {
+  const to = process.env.NOTIFICATION_EMAIL;
+  if (!to) throw new Error("Notification email is not configured");
+  return sendEmail(to, subject, html);
 }
