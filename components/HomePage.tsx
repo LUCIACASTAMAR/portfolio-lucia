@@ -711,7 +711,7 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
                 <ul className="mt-7 flex-1 space-y-3 border-t border-white/10 pt-6">
                   {service.features.map((feature) => <li key={feature} className="flex gap-3 text-sm text-white/55"><span className="text-white/60">—</span><span>{feature}</span></li>)}
                 </ul>
-                <a href={`mailto:${profile.contact?.email ?? "lucycastamar@gmail.com"}?subject=${encodeURIComponent(service.title)}`} className="mt-8 inline-flex items-center justify-center border border-white/20 px-5 py-3 text-sm font-medium transition-colors hover:bg-white hover:text-black">
+                <a href={`/solicitudes?lang=${locale}&type=quote&service=${encodeURIComponent(service.title)}`} className="mt-8 inline-flex items-center justify-center border border-white/20 px-5 py-3 text-sm font-medium transition-colors hover:bg-white hover:text-black">
                   {pricingCopy.quote}
                 </a>
               </article>
@@ -736,7 +736,7 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
                   <ul className="mt-7 flex-1 space-y-3 border-t border-white/10 pt-6">
                     {plan.features.map((feature) => <li key={feature} className="flex gap-3 text-sm text-white/55"><span className="text-white/60">—</span><span>{feature}</span></li>)}
                   </ul>
-                  <a href={`mailto:${profile.contact?.email ?? "lucycastamar@gmail.com"}?subject=${encodeURIComponent(plan.name + " - " + pricingCopy.maintenance)}`} className="mt-8 inline-flex items-center justify-center border border-white/20 px-5 py-3 text-sm font-medium transition-colors hover:bg-white hover:text-black">{pricingCopy.quote}</a>
+                  <a href={`/solicitudes?lang=${locale}&type=quote&service=${encodeURIComponent(plan.name + " - " + pricingCopy.maintenance)}`} className="mt-8 inline-flex items-center justify-center border border-white/20 px-5 py-3 text-sm font-medium transition-colors hover:bg-white hover:text-black">{pricingCopy.quote}</a>
                 </article>
               ))}
             </div>
