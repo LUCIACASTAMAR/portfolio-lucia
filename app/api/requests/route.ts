@@ -9,9 +9,6 @@ const escapeHtml = (value: string) => value.replace(/[&<>"']/g, (char) => ({ "&"
 
 export async function POST(request: NextRequest) {
   if (!envReady()) return NextResponse.json({ error: "El sistema aún no está configurado." }, { status: 503 });
-  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  const { searchParams } = new URL(request.url);
-  // Lightweight edge-compatible cooldown; the honeypot below is the primary bot trap.
   const body = await request.json().catch(() => null);
   if (!body || typeof body !== "object") return NextResponse.json({ error: "Solicitud no válida." }, { status: 400 });
   if (typeof body.website !== "string" || body.website.length > 0) return NextResponse.json({ ok: true });
@@ -29,9 +26,7 @@ export async function POST(request: NextRequest) {
     meeting_date: type === "meeting" ? meetingDate : null,
     meeting_time: type === "meeting" ? meetingTime : null,
     status: "new",
-    source_ip_hash: undefined,
   };
-  delete (row as Record<string, unknown>).source_ip_hash;
 
   try {
     const response = await supabaseRequest("client_requests", { method: "POST", headers: { Prefer: "return=representation" }, body: JSON.stringify(row) });
