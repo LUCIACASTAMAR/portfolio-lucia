@@ -39,6 +39,8 @@ const skills = [
   "GitHub",
 ];
 
+const meetingLabels: Record<Locale, string> = { es: "Solicitar una reunión", en: "Request a meeting", fr: "Demander un rendez-vous", de: "Gespräch anfragen", it: "Richiedi un incontro", pt: "Pedir reunião", nl: "Gesprek aanvragen", ru: "Запросить встречу" };
+
 export default function HomePage({ locale = "es" }: HomePageProps) {
   const t = getTranslations(locale);
   const content = localizedContent[locale];
@@ -774,12 +776,20 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
             {t.contact.description}
           </p>
 
-          <a
-            href={`mailto:${profile.contact?.email ?? "lucycastamar@gmail.com"}`}
-            className="mt-10 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold !text-black transition hover:bg-white/85"
-          >
-            {t.contact.contact}
-          </a>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <a
+              href={`/solicitudes?lang=${locale}&type=quote`}
+              className="inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold !text-black transition hover:bg-white/85"
+            >
+              {pricingCopy.quote}
+            </a>
+            <a
+              href={`/solicitudes?lang=${locale}&type=meeting`}
+              className="inline-flex rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              {meetingLabels[locale]}
+            </a>
+          </div>
 
           <div className="mt-6 flex justify-center gap-6 text-sm text-white/40">
 
