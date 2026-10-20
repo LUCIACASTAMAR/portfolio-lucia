@@ -1,7 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { FormEvent, useEffect, useState } from "react";
 
 const copy = {
   es: { back:"Volver al portfolio", eyebrow:"NUEVO PROYECTO / REUNIÓN", title:"Cuéntame qué necesitas.", intro:"Rellena este formulario y revisaré tu solicitud personalmente. Las reuniones quedan pendientes de confirmación por email.", kind:"¿Qué necesitas?", quote:"Solicitar presupuesto", meeting:"Solicitar una reunión", name:"Nombre", email:"Correo electrónico", company:"Empresa (opcional)", service:"Servicio", choose:"Selecciona una opción", web:"Web esencial", corporate:"Web corporativa", redesign:"Rediseño web", ai:"IA y automatización", maintenance:"Mantenimiento web", other:"Otro / no lo tengo claro", budget:"Presupuesto aproximado", budgetOptions:["Aún no lo sé","Menos de 500 €","500–1.000 €","1.000–2.000 €","Más de 2.000 €"], date:"Fecha preferida", time:"Hora preferida", message:"Cuéntame un poco sobre el proyecto", messageHint:"Objetivos, necesidades, plazos o cualquier detalle útil…", send:"Enviar solicitud", sending:"Enviando…", success:"Solicitud enviada. Gracias; me pondré en contacto contigo por email.", error:"No se ha podido enviar. Comprueba los datos e inténtalo de nuevo.", required:"Completa los campos obligatorios.", privacy:"Al enviar el formulario, aceptas que use tus datos para responder a esta solicitud. No los usaré para otros fines." },
@@ -17,12 +16,17 @@ const copy = {
 type Locale = keyof typeof copy;
 
 export default function RequestsPage() {
-  const params = useSearchParams();
-  const requestedLocale = params.get("lang") as Locale | null;
-  const locale: Locale = requestedLocale && requestedLocale in copy ? requestedLocale : "es";
+  const [locale, setLocale] = useState<Locale>("es");
+  const [type, setType] = useState<"quote" | "meeting">("quote");
+  const [service, setService] = useState("");
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const requestedLocale = params.get("lang") as Locale | null;
+    if (requestedLocale && requestedLocale in copy) setLocale(requestedLocale);
+    setType(params.get("type") === "meeting" ? "meeting" : "quote");
+    setService(params.get("service") || "");
+  }, []);
   const t = copy[locale];
-  const [type, setType] = useState<"quote" | "meeting">(params.get("type") === "meeting" ? "meeting" : "quote");
-  const [service, setService] = useState(params.get("service") || "");
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState("");
   const [statusKind, setStatusKind] = useState<"success" | "error" | "">("");
