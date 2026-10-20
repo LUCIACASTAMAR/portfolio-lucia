@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { envReady, sendNotificationEmail, supabaseRequest } from "@/lib/requests";
+import { envReady, sendEmail, sendNotificationEmail, supabaseRequest } from "@/lib/requests";
 
 export const runtime = "nodejs";
 
@@ -40,6 +40,17 @@ export async function POST(request: NextRequest) {
     const meeting = type === "meeting" ? `<p><strong>Fecha preferida:</strong> ${escapeHtml(String(meetingDate))} a las ${escapeHtml(String(meetingTime))}</p><p>Esta es una petición de reunión pendiente de confirmación, no una reserva confirmada.</p>` : "";
     const html = `<h2>Nueva solicitud desde el portfolio</h2><p><strong>Tipo:</strong> ${escapeHtml(type === "meeting" ? "Solicitud de reunión" : "Presupuesto")}</p><p><strong>Nombre:</strong> ${escapeHtml(row.name)}</p><p><strong>Email:</strong> ${escapeHtml(row.email)}</p><p><strong>Empresa:</strong> ${escapeHtml(row.company || "—")}</p><p><strong>Servicio:</strong> ${escapeHtml(row.service)}</p><p><strong>Presupuesto:</strong> ${escapeHtml(row.budget)}</p>${meeting}<p><strong>Descripción:</strong></p><p>${escapeHtml(row.message).replace(/\n/g, "<br>")}</p><p>ID: ${escapeHtml(String(id ?? "guardado"))}</p>`;
     await sendNotificationEmail(type === "meeting" ? "Nueva solicitud de reunión" : "Nueva solicitud de presupuesto", html);
+    const confirmations: Record<string, string> = {
+      es: "Gracias por contactar conmigo. He recibido tu solicitud y la revisaré personalmente. Las fechas de reunión propuestas quedan pendientes de confirmación.",
+      en: "Thank you for getting in touch. I have received your request and will review it personally. Proposed meeting times are not confirmed yet.",
+      fr: "Merci pour votre message. J’ai bien reçu votre demande. Les horaires de rendez-vous proposés restent à confirmer.",
+      de: "Vielen Dank. Ich habe Ihre Anfrage erhalten. Vorgeschlagene Gesprächstermine sind noch nicht bestätigt.",
+      it: "Grazie per avermi contattata. Ho ricevuto la richiesta. Gli orari proposti per l’incontro sono ancora da confermare.",
+      pt: "Obrigado pelo contacto. Recebi o seu pedido. Os horários propostos para a reunião ainda não estão confirmados.",
+      nl: "Bedankt voor je bericht. Ik heb je aanvraag ontvangen. Voorgestelde afspraaktijden zijn nog niet bevestigd.",
+      ru: "Спасибо за обращение. Я получила ваш запрос. Предложенное время встречи пока не подтверждено.",
+    };
+    await sendEmail(row.email, "Hemos recibido tu solicitud / Request received", "<p>" + escapeHtml(row.name) + ",</p><p>" + escapeHtml(confirmations[String(locale)] || confirmations.es) + "</p><p>Lucía Castañeda</p>");
     return NextResponse.json({ ok: true, id });
   } catch (error) {
     console.error("Request handling failed", error);
