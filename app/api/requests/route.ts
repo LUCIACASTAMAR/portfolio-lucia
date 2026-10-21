@@ -37,7 +37,23 @@ export async function POST(request: NextRequest) {
     }
     const inserted = await response.json();
     const id = Array.isArray(inserted) ? inserted[0]?.id : undefined;
-    const meeting = type === "meeting" ? `<p><strong>Fecha preferida:</strong> ${escapeHtml(String(meetingDate))} a las ${escapeHtml(String(meetingTime))}</p><p>Esta es una petición de reunión pendiente de confirmación, no una reserva confirmada.</p>` : "";
+    const calendarLink = type === "meeting" && typeof meetingDate === "string" && typeof meetingTime === "string"
+      ? (() => {
+          const start = `${meetingDate.replace(/-/g, "")}T${meetingTime.replace(":", "")}00`;
+          const endDate = new Date(`${meetingDate}T${meetingTime}:00+01:00`);
+          endDate.setMinutes(endDate.getMinutes() + 30);
+          const end = `${endDate.getFullYear()}${String(endDate.getMonth() + 1).padStart(2, "0")}${String(endDate.getDate()).padStart(2, "0")}T${String(endDate.getHours()).padStart(2, "0")}${String(endDate.getMinutes()).padStart(2, "0")}00`;
+          const params = new URLSearchParams({
+            action: "TEMPLATE",
+            text: `Reunión con ${row.name}`,
+            dates: `${start}/${end}`,
+            details: `Solicitud de reunión recibida desde luciacastaneda.com.\\nEmail: ${row.email}\\nModalidad y hora pendientes de confirmar.\\n\\nDescripción: ${row.message}`,
+            ctz: "Europe/Madrid",
+          });
+          return `https://calendar.google.com/calendar/render?${params.toString()}`;
+        })()
+      : "";
+    const meeting = type === "meeting" ? `<p><strong>Fecha preferida:</strong> ${escapeHtml(String(meetingDate))} a las ${escapeHtml(String(meetingTime))}</p><p>Esta es una petición de reunión pendiente de confirmación, no una reserva confirmada.</p><p><a href="${calendarLink}" style="display:inline-block;padding:12px 18px;background:#111827;color:#ffffff;text-decoration:none;border-radius:8px;font-weight:bold;">Añadir a Google Calendar</a></p><p>Duración inicial del evento: 30 minutos. Puedes editarla en Calendar. Confirma la modalidad y la hora con el cliente antes de darla por cerrada.</p>` : "";
     const html = `<h2>Nueva solicitud desde el portfolio</h2><p><strong>Tipo:</strong> ${escapeHtml(type === "meeting" ? "Solicitud de reunión" : "Presupuesto")}</p><p><strong>Nombre:</strong> ${escapeHtml(row.name)}</p><p><strong>Email:</strong> ${escapeHtml(row.email)}</p><p><strong>Empresa:</strong> ${escapeHtml(row.company || "—")}</p><p><strong>Servicio:</strong> ${escapeHtml(row.service)}</p><p><strong>Presupuesto:</strong> ${escapeHtml(row.budget)}</p>${meeting}<p><strong>Descripción:</strong></p><p>${escapeHtml(row.message).replace(/\n/g, "<br>")}</p><p>ID: ${escapeHtml(String(id ?? "guardado"))}</p>`;
     await sendNotificationEmail(type === "meeting" ? "Nueva solicitud de reunión" : "Nueva solicitud de presupuesto", html);
     const confirmations: Record<string, string> = {
