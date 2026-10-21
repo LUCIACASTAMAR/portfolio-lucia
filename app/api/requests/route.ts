@@ -40,9 +40,9 @@ export async function POST(request: NextRequest) {
     const calendarLink = type === "meeting" && typeof meetingDate === "string" && typeof meetingTime === "string"
       ? (() => {
           const start = `${meetingDate.replace(/-/g, "")}T${meetingTime.replace(":", "")}00`;
-          const endDate = new Date(`${meetingDate}T${meetingTime}:00+01:00`);
-          endDate.setMinutes(endDate.getMinutes() + 30);
-          const end = `${endDate.getFullYear()}${String(endDate.getMonth() + 1).padStart(2, "0")}${String(endDate.getDate()).padStart(2, "0")}T${String(endDate.getHours()).padStart(2, "0")}${String(endDate.getMinutes()).padStart(2, "0")}00`;
+          const endDate = new Date(`${meetingDate}T${meetingTime}:00Z`);
+          endDate.setUTCMinutes(endDate.getUTCMinutes() + 30);
+          const end = `${endDate.getUTCFullYear()}${String(endDate.getUTCMonth() + 1).padStart(2, "0")}${String(endDate.getUTCDate()).padStart(2, "0")}T${String(endDate.getUTCHours()).padStart(2, "0")}${String(endDate.getUTCMinutes()).padStart(2, "0")}00`;
           const params = new URLSearchParams({
             action: "TEMPLATE",
             text: `Reunión con ${row.name}`,
