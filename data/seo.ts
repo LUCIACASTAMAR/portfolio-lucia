@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n";
 
-export const siteUrl = "https://portfolio-lucia-swart.vercel.app";
+export const siteUrl = "https://www.luciacastaneda.com";
 
 export const seoByLocale: Record<
   Locale,
