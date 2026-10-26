@@ -16,7 +16,7 @@ const STORAGE_KEY = "lucia-cookie-consent";
 const CONSENT_EVENT = "lucia-cookie-consent-updated";
 
 export default function GoogleAnalytics() {
-  const measurementId = process.env.NEXT_PUBLIC_GA_ID;
+  const measurementId = process.env.NEXT_PUBLIC_GA_ID || "G-5H2CYHJ2QD";
 
   useEffect(() => {
     if (!measurementId || !/^G-[A-Z0-9]+$/.test(measurementId)) return;
