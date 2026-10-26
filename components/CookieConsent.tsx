@@ -218,6 +218,7 @@ export default function CookieConsent() {
     setMarketing(allowMarketing);
     setVisible(false);
     setSettingsOpen(false);
+    window.dispatchEvent(new Event("lucia-cookie-consent-updated"));
     setSavedMessage(true);
     window.setTimeout(() => setSavedMessage(false), 3500);
   }
@@ -247,9 +248,10 @@ export default function CookieConsent() {
             <div className="max-w-2xl">
               <p className="mb-2 text-base font-semibold tracking-tight">{t.title}</p>
               <p className="text-sm leading-6 text-white/70">{t.body}</p>
-              <a href="/cookies" className="mt-2 inline-block text-xs text-white/80 underline underline-offset-4 hover:text-white">
-                {t.policy}
-              </a>
+              <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                <a href="/cookies" className="inline-block text-xs text-white/80 underline underline-offset-4 hover:text-white">{t.policy}</a>
+                <a href="/privacidad" className="inline-block text-xs text-white/80 underline underline-offset-4 hover:text-white">{locale === "es" ? "Política de privacidad" : locale === "fr" ? "Politique de confidentialité" : locale === "de" ? "Datenschutzerklärung" : locale === "it" ? "Informativa sulla privacy" : locale === "pt" ? "Política de privacidade" : locale === "nl" ? "Privacybeleid" : locale === "ru" ? "Политика конфиденциальности" : "Privacy policy"}</a>
+              </div>
             </div>
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap lg:justify-end">
               <button type="button" onClick={() => saveConsent(false, false)} className="rounded-full border border-white/25 px-5 py-3 text-sm transition hover:bg-white/10">
