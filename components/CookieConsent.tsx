@@ -274,7 +274,7 @@ export default function CookieConsent() {
                 <p className="mb-2 text-xs uppercase tracking-[.2em] text-white/50">Privacy</p>
                 <h2 id="cookie-settings-title" className="text-xl font-semibold">{t.settings}</h2>
               </div>
-              <button type="button" onClick={() => { setSettingsOpen(false); if (!window.localStorage.getItem(STORAGE_KEY)) setVisible(true); }} className="rounded-full border border-white/20 px-3 py-1 text-sm text-white/70 hover:text-white">
+              <button type="button" onClick={() => { setSettingsOpen(false); setVisible(!window.localStorage.getItem(STORAGE_KEY)); }} className="rounded-full border border-white/20 px-3 py-1 text-sm text-white/70 hover:text-white">
                 {t.close}
               </button>
             </div>
