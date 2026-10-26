@@ -21,7 +21,28 @@ export default function GoogleAnalytics() {
   useEffect(() => {
     if (!measurementId || !/^G-[A-Z0-9]+$/.test(measurementId)) return;
 
-    let scriptAdded = false;
+    let configured = false;
+
+    const ensureGtagQueue = () => {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function gtag(...args: unknown[]) {
+        window.dataLayer?.push(args);
+      };
+      return window.gtag;
+    };
+
+    // Consent Mode v2: deny optional storage before any Google tag can run.
+    const gtag = ensureGtagQueue();
+    gtag("consent", "default", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      functionality_storage: "granted",
+      security_storage: "granted",
+      wait_for_update: 500,
+    });
+    gtag("js", new Date());
 
     const readConsent = (): Consent => {
       try {
@@ -38,43 +59,39 @@ export default function GoogleAnalytics() {
 
       if (!analyticsAllowed) {
         window[`ga-disable-${measurementId}`] = true;
-        if (window.gtag) {
-          window.gtag("consent", "update", {
-            analytics_storage: "denied",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied",
-          });
-        }
+        gtag("consent", "update", {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+        });
         return;
       }
 
       window[`ga-disable-${measurementId}`] = false;
+      gtag("consent", "update", {
+        analytics_storage: "granted",
+        // The site has no advertising consent category connected to Google Ads.
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+      });
 
-      if (!scriptAdded && !document.querySelector(`script[data-lucia-ga="${measurementId}"]`)) {
+      if (!document.querySelector(`script[data-lucia-ga="${measurementId}"]`)) {
         const script = document.createElement("script");
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
         script.dataset.luciaGa = measurementId;
         document.head.appendChild(script);
-        scriptAdded = true;
       }
 
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = window.gtag || function gtag(...args: unknown[]) {
-        window.dataLayer?.push(args);
-      };
-      window.gtag("js", new Date());
-      window.gtag("consent", "update", {
-        analytics_storage: "granted",
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-      });
-      window.gtag("config", measurementId, {
-        anonymize_ip: true,
-        send_page_view: true,
-      });
+      if (!configured) {
+        gtag("config", measurementId, {
+          anonymize_ip: true,
+          send_page_view: true,
+        });
+        configured = true;
+      }
     };
 
     applyConsent();
