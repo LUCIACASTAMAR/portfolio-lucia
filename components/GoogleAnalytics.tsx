@@ -25,8 +25,9 @@ export default function GoogleAnalytics() {
 
     const ensureGtagQueue = () => {
       window.dataLayer = window.dataLayer || [];
-      window.gtag = window.gtag || function gtag(...args: unknown[]) {
-        window.dataLayer?.push(args);
+      // Use Google's standard gtag queue format (the Arguments object).
+      window.gtag = window.gtag || function gtag() {
+        window.dataLayer?.push(arguments);
       };
       return window.gtag;
     };
