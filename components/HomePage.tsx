@@ -601,7 +601,7 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-xs font-medium text-[#D5A6B4] transition-colors hover:text-white"
         >
-          Visitar web ↗
+          Visitar noa-younes.com
         </a>
       )}
     </div>
