@@ -586,16 +586,25 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
 
       {/* PROJECT LINK */}
 
+      <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
       <a
         href={`/proyectos/${project.slug}`}
-        className="mt-7 inline-flex items-center gap-2 text-xs font-medium text-white/60 transition-colors hover:text-white"
+        className="inline-flex items-center gap-2 text-xs font-medium text-white/60 transition-colors hover:text-white"
       >
         {t.projects.view}
-
-        <span className="transition-transform group-hover:translate-x-1">
-          →
-        </span>
+        <span className="transition-transform group-hover:translate-x-1">→</span>
       </a>
+      {project.slug === "luxury" && (
+        <a
+          href="https://noayounes.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-xs font-medium text-[#D5A6B4] transition-colors hover:text-white"
+        >
+          Visitar web ↗
+        </a>
+      )}
+    </div>
 
     </div>
 
