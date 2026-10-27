@@ -409,7 +409,7 @@ export default function LuxuryProject() {
             rel="noopener noreferrer"
             className="inline-flex rounded-full bg-[#7B1E3A] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#922747]"
           >
-            Visitar noa-younes.com ↗
+            Visitar noa-younes.com
           </a>
           <a
             href="/"
