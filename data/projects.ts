@@ -19,17 +19,17 @@ export const projects = [
   {
     number: "02",
     slug: "luxury",
-    title: "Luxury Corporate Website",
-    category: "Web Development · Corporate · IA",
+    title: "Noa Younes — Personal Brand Website",
+    category: "Web · Marca personal · Luxury",
     description:
-      "Diseño y desarrollo integral de una web corporativa para una profesional vinculada a la industria del lujo, con una identidad digital orientada a transmitir una imagen profesional y cuidada. La solución incorpora un chatbot basado en inteligencia artificial.",
+      "Diseño y desarrollo integral de la web profesional de Noa Younes, con una identidad editorial premium alineada con el marketing de lujo, la estrategia de marca y la comunicación profesional.",
     technologies: [
       "Node.js",
       "JavaScript",
       "IA",
       "Web Development",
     ],
-    status: "EN DESARROLLO",
-    type: "Corporate Web",
+    status: "COMPLETADO",
+    type: "Completed · Corporate Web",
   },
 ];
