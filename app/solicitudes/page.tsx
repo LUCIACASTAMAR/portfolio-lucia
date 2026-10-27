@@ -86,7 +86,7 @@ export default function RequestsPage() {
         <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true"><label>Leave this field empty<input name="website" tabIndex={-1} autoComplete="off" /></label></div>
         <p className="text-xs leading-6 text-white/35">{t.privacy}</p>
         {status && <p role="status" className={`rounded-xl border p-4 text-sm ${statusKind === "success" ? "border-emerald-300/20 bg-emerald-300/5 text-emerald-100" : "border-red-300/20 bg-red-300/5 text-red-100"}`}>{status}</p>}
-        <button disabled={busy} className="w-full rounded-xl border border-white/25 bg-white px-5 py-4 text-sm font-medium text-black transition hover:bg-white/90 disabled:cursor-wait disabled:opacity-60">{busy ? t.sending : t.send} <span aria-hidden="true">↗</span></button>
+        <button disabled={busy} className="w-full rounded-xl border border-white/25 bg-white px-5 py-4 text-sm font-medium text-black transition hover:bg-white/90 disabled:cursor-wait disabled:opacity-60">{busy ? t.sending : t.send}</button>
       </form>
     </div>
   </main>;
