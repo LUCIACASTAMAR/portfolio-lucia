@@ -30,11 +30,11 @@ export const localizedContent: Record<
           "Digitalización de un negocio familiar con más de 35 años de experiencia que no contaba con presencia web. Desarrollo integral de su nueva plataforma digital, incorporando un chatbot basado en inteligencia artificial.",
       },
       luxury: {
-        type: "Corporate Web",
-        category: "Web Development · Corporate · IA",
-        title: "Luxury Corporate Website",
+        type: "Completado · Web corporativa",
+        category: "Web · Personal Brand · Luxury",
+        title: "Noa Younes — Personal Brand Website",
         description:
-          "Diseño y desarrollo integral de una web corporativa para una profesional vinculada a la industria del lujo, con una identidad digital orientada a transmitir una imagen profesional y cuidada. La solución incorpora un chatbot basado en inteligencia artificial.",
+          "Diseño y desarrollo integral de la web profesional de Noa Younes, con una identidad editorial premium alineada con el marketing de lujo, la estrategia de marca y la comunicación profesional.",
       },
     },
     education: [
@@ -79,11 +79,11 @@ export const localizedContent: Record<
           "Digitalization of a family business with more than 35 years of experience that previously had no web presence. Full development of its new digital platform, including an artificial intelligence chatbot.",
       },
       luxury: {
-        type: "Corporate Web",
+        type: "Completado · Web corporativa",
         category: "Web Development · Corporate · AI",
-        title: "Luxury Corporate Website",
+        title: "Noa Younes — Personal Brand Website",
         description:
-          "Full design and development of a corporate website for a professional connected to the luxury industry, with a digital identity focused on communicating a professional and refined image. The solution includes an artificial intelligence chatbot.",
+          "Full design and development of Noa Younes’s professional website, with a premium editorial identity aligned with luxury marketing, brand strategy and professional communication.",
       },
     },
     education: [
@@ -128,11 +128,11 @@ export const localizedContent: Record<
           "Numérisation d'une entreprise familiale avec plus de 35 ans d'expérience qui ne disposait pas auparavant d'une présence sur le web. Développement complet de sa nouvelle plateforme numérique, avec intégration d'un chatbot basé sur l'intelligence artificielle.",
       },
       luxury: {
-        type: "Site web corporate",
-        category: "Développement web · Corporate · IA",
-        title: "Luxury Corporate Website",
+        type: "Projet terminé · Site web",
+        category: "Web · Marque personnelle · Luxe",
+        title: "Noa Younes — Personal Brand Website",
         description:
-          "Conception et développement complet d'un site web corporate pour une professionnelle liée à l'industrie du luxe, avec une identité numérique conçue pour transmettre une image professionnelle et soignée. La solution intègre un chatbot basé sur l'intelligence artificielle.",
+          "Conception et développement complet du site professionnel de Noa Younes, avec une identité éditoriale premium liée au marketing du luxe, à la stratégie de marque et à la communication professionnelle.",
       },
     },
     education: [
@@ -177,11 +177,11 @@ export const localizedContent: Record<
           "Digitalisierung eines Familienunternehmens mit mehr als 35 Jahren Erfahrung, das zuvor keine Webpräsenz hatte. Vollständige Entwicklung der neuen digitalen Plattform mit integriertem Chatbot auf Basis künstlicher Intelligenz.",
       },
       luxury: {
-        type: "Corporate Website",
-        category: "Webentwicklung · Corporate · KI",
-        title: "Luxury Corporate Website",
+        type: "Completed · Corporate Website",
+        category: "Web · Personal Brand · Luxus",
+        title: "Noa Younes — Personal Brand Website",
         description:
-          "Konzeption und vollständige Entwicklung einer Corporate Website für eine Fachkraft aus der Luxusbranche, mit einer digitalen Identität, die ein professionelles und hochwertiges Erscheinungsbild vermittelt. Die Lösung umfasst einen Chatbot auf Basis künstlicher Intelligenz.",
+          "Konzeption und vollständige Entwicklung der professionellen Website von Noa Younes mit einer hochwertigen Editorial-Ästhetik für Luxusmarketing, Markenstrategie und professionelle Kommunikation.",
       },
     },
     education: [
@@ -226,11 +226,11 @@ export const localizedContent: Record<
           "Digitalizzazione di un'azienda familiare con oltre 35 anni di esperienza che in precedenza non disponeva di una presenza sul web. Sviluppo completo della nuova piattaforma digitale, con un chatbot basato sull'intelligenza artificiale.",
       },
       luxury: {
-        type: "Sito web corporate",
-        category: "Sviluppo web · Corporate · IA",
-        title: "Luxury Corporate Website",
+        type: "Progetto completato · Sito web",
+        category: "Web · Personal Brand · Lusso",
+        title: "Noa Younes — Personal Brand Website",
         description:
-          "Progettazione e sviluppo completo di un sito web corporate per una professionista legata al settore del lusso, con un'identità digitale orientata a trasmettere un'immagine professionale e curata. La soluzione integra un chatbot basato sull'intelligenza artificiale.",
+          "Progettazione e sviluppo completo del sito professionale di Noa Younes, con un'identità editoriale premium dedicata al marketing del lusso, alla strategia di marca e alla comunicazione professionale.",
       },
     },
     education: [
@@ -275,11 +275,11 @@ export const localizedContent: Record<
           "Digitalização de uma empresa familiar com mais de 35 anos de experiência que anteriormente não tinha presença na web. Desenvolvimento completo da sua nova plataforma digital, incluindo um chatbot baseado em inteligência artificial.",
       },
       luxury: {
-        type: "Website corporativo",
-        category: "Desenvolvimento web · Corporate · IA",
-        title: "Luxury Corporate Website",
+        type: "Projeto concluído · Website",
+        category: "Web · Marca pessoal · Luxo",
+        title: "Noa Younes — Personal Brand Website",
         description:
-          "Conceção e desenvolvimento completo de um website corporativo para uma profissional ligada à indústria do luxo, com uma identidade digital orientada para transmitir uma imagem profissional e cuidada. A solução inclui um chatbot baseado em inteligência artificial.",
+          "Conceção e desenvolvimento completo do website profissional de Noa Younes, com uma identidade editorial premium alinhada com o marketing de luxo, a estratégia de marca e a comunicação profissional.",
       },
     },
     education: [
@@ -324,11 +324,11 @@ export const localizedContent: Record<
           "Digitalisering van een familiebedrijf met meer dan 35 jaar ervaring dat voorheen geen aanwezigheid op het web had. Volledige ontwikkeling van het nieuwe digitale platform, inclusief een chatbot op basis van kunstmatige intelligentie.",
       },
       luxury: {
-        type: "Corporate website",
-        category: "Webontwikkeling · Corporate · AI",
-        title: "Luxury Corporate Website",
+        type: "Voltooid · Corporate website",
+        category: "Web · Personal Brand · Luxe",
+        title: "Noa Younes — Personal Brand Website",
         description:
-          "Volledig ontwerp en ontwikkeling van een corporate website voor een professional uit de luxesector, met een digitale identiteit die gericht is op een professionele en verfijnde uitstraling. De oplossing bevat een chatbot op basis van kunstmatige intelligentie.",
+          "Volledig ontwerp en ontwikkeling van de professionele website van Noa Younes, met een premium editoriale identiteit rond luxury marketing, merkstrategie en professionele communicatie.",
       },
     },
     education: [
@@ -373,11 +373,11 @@ export const localizedContent: Record<
           "Цифровизация семейного бизнеса с более чем 35-летним опытом, который ранее не имел веб-присутствия. Полная разработка новой цифровой платформы с интегрированным чат-ботом на основе искусственного интеллекта.",
       },
       luxury: {
-        type: "Корпоративный сайт",
-        category: "Веб-разработка · Corporate · ИИ",
-        title: "Luxury Corporate Website",
+        type: "Завершено · Корпоративный сайт",
+        category: "Веб · Личный бренд · Люкс",
+        title: "Noa Younes — Personal Brand Website",
         description:
-          "Полный дизайн и разработка корпоративного сайта для специалистки, связанной с индустрией роскоши, с цифровой идентичностью, ориентированной на профессиональный и тщательно продуманный образ. Решение включает чат-бот на основе искусственного интеллекта.",
+          "Полный дизайн и разработка профессионального сайта Ноа Юнес с премиальной редакционной эстетикой, посвящённой маркетингу люкса, стратегии бренда и профессиональным коммуникациям.",
       },
     },
     education: [
