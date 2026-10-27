@@ -74,7 +74,7 @@ export default function LuxuryProject() {
           <p className="text-xs uppercase tracking-[0.3em] text-[#8d765a]">Visita el proyecto</p>
           <h2 className="mx-auto mt-6 max-w-3xl text-4xl leading-tight sm:text-6xl">Una marca personal con identidad propia.</h2>
           <p className="mx-auto mt-6 max-w-xl leading-7 text-black/60">Consulta la web publicada para explorar la experiencia completa.</p>
-          <a href="https://noayounes.com" target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex bg-[#171515] px-7 py-4 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#6b2738]">Visitar noa-younes.com</a>
+          <a href="https://noayounes.com" target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex min-h-14 items-center justify-center bg-[#171515] px-7 py-4 text-xs font-semibold uppercase tracking-[0.2em] !text-white opacity-100 transition-colors hover:bg-[#6b2738]"><span className="!text-white">Visitar noa-younes.com</span></a>
         </div>
       </section>
 
