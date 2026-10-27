@@ -10,9 +10,9 @@ export const seoByLocale: Record<
   }
 > = {
   es: {
-    title: "Lucía Castañeda | Ingeniería Informática · IA · Datos · SAP",
+    title: "Lucía Castañeda | Desarrollo web, IA y soluciones digitales",
     description:
-      "Portfolio profesional de Lucía Castañeda, estudiante de Ingeniería Informática especializada en Sistemas de Información. Desarrollo web, inteligencia artificial, automatización, datos y SAP S/4HANA.",
+      "Desarrollo web, inteligencia artificial y automatización. Portfolio de Lucía Castañeda, estudiante de Ingeniería Informática y creadora de soluciones digitales para proyectos y negocios.",
   },
 
   en: {
