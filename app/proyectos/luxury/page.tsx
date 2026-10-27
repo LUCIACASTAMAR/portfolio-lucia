@@ -101,20 +101,17 @@ export default function LuxuryProject() {
           <div className="grid gap-16 lg:grid-cols-[1fr_0.8fr] lg:items-end">
             <div>
               <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/40">
-                02 / Corporate Web · AI
+                02 / Completed Project · Luxury Personal Brand
               </p>
 
               <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl lg:text-8xl">
-                LUXURY
+                NOA YOUNES
                 <br />
-                <span className="text-white/40">CORPORATE</span>
+                <span className="text-white/40">PERSONAL BRAND</span>
               </h1>
 
               <p className="mt-8 max-w-2xl text-lg leading-8 text-white/60">
-                Diseño y desarrollo integral de una web corporativa para una
-                profesional vinculada al marketing de lujo, con una identidad
-                digital orientada a transmitir una imagen profesional y
-                cuidada.
+                Diseño y desarrollo integral de la web profesional de Noa Younes, con una identidad editorial premium alineada con el marketing de lujo, la estrategia de marca y la comunicación profesional.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-3">
@@ -169,7 +166,7 @@ export default function LuxuryProject() {
               Estado
             </p>
             <p className="mt-4 text-lg text-white/60">
-              En desarrollo
+              Completado
             </p>
           </div>
         </div>
@@ -402,22 +399,32 @@ export default function LuxuryProject() {
         </h2>
 
         <p className="mx-auto mt-8 max-w-2xl text-white/50">
-          Proyecto actualmente en desarrollo y todavía no publicado.
+          Proyecto finalizado y publicado. La web ya está disponible online.
         </p>
 
-        <a
-          href="/"
-          className="mt-10 inline-flex rounded-full border border-white/10 px-6 py-3 text-sm text-white/70 transition-colors hover:bg-white hover:text-black"
-        >
-          ← Volver al portfolio
-        </a>
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
+          <a
+            href="https://noayounes.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex rounded-full bg-[#7B1E3A] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#922747]"
+          >
+            Visitar noa-younes.com ↗
+          </a>
+          <a
+            href="/"
+            className="inline-flex rounded-full border border-white/10 px-6 py-3 text-sm text-white/70 transition-colors hover:bg-white hover:text-black"
+          >
+            ← Volver al portfolio
+          </a>
+        </div>
       </section>
 
       {/* FOOTER */}
       <footer className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-xs text-white/30 sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <span>Lucía Castañeda</span>
-          <span>Luxury Corporate Website · Case Study</span>
+          <span>Noa Younes · Personal Brand Website · Proyecto completado</span>
         </div>
       </footer>
     </main>
