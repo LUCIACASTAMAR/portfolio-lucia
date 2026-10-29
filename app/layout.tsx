@@ -110,35 +110,34 @@ export const metadata: Metadata = {
   },
 };
 
-const structuredData = {
+const personStructuredData = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": `${siteUrl}/#person`,
-      name: profile.name,
-      alternateName: "Lucía Castañeda",
-      url: siteUrl,
-      image: `${siteUrl}/og-image.png`,
-      description: profile.extendedDescription,
-      email: profile.contact.email,
-      sameAs: [profile.contact.linkedin],
-      knowsAbout: [...profile.areas, ...profile.technologies],
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: "Lucía Castañeda",
-      alternateName: "Portfolio de Lucía Castañeda",
-      description: seoByLocale.es.description,
-      inLanguage: ["es", "en", "fr", "de", "it", "pt", "nl", "ru"],
-      publisher: { "@id": `${siteUrl}/#person` },
-    },
-  ],
+  "@type": "Person",
+  "@id": `${siteUrl}/#person`,
+  name: profile.name,
+  alternateName: "Lucía Castañeda",
+  url: siteUrl,
+  image: `${siteUrl}/og-image.png`,
+  description: profile.extendedDescription,
+  email: profile.contact.email,
+  sameAs: [profile.contact.linkedin],
+  knowsAbout: [...profile.areas, ...profile.technologies],
 };
 
-const structuredDataJson = JSON.stringify(structuredData).replace(/</g, "\\u003c");
+const websiteStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  url: siteUrl,
+  name: "Lucía Castañeda",
+  alternateName: "Portfolio de Lucía Castañeda",
+  description: seoByLocale.es.description,
+  inLanguage: ["es", "en", "fr", "de", "it", "pt", "nl", "ru"],
+  publisher: { "@id": `${siteUrl}/#person` },
+};
+
+const personStructuredDataJson = JSON.stringify(personStructuredData).replace(/</g, "\\u003c");
+const websiteStructuredDataJson = JSON.stringify(websiteStructuredData).replace(/</g, "\\u003c");
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -147,7 +146,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredDataJson }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: personStructuredDataJson }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: websiteStructuredDataJson }} />
         {children}
         <CookieConsent />
         <GoogleAnalytics />
