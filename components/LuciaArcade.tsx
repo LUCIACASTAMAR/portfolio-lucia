@@ -93,17 +93,40 @@ export default function LuciaArcade() {
               ))}
 
               <div className="absolute z-20 -translate-x-1/2 -translate-y-1/2 transition-all duration-200 ease-out" style={{ left: `${position.x}%`, top: `${position.y}%` }} aria-label="Lucía, personaje del juego">
-                <div className="relative h-[76px] w-[58px] sm:h-[92px] sm:w-[70px]">
-                  <div className="absolute left-[8px] top-[4px] h-[48px] w-[44px] rounded-[45%] bg-[#39202a] shadow-[0_0_20px_rgba(204,105,133,.25)]" />
-                  <div className="absolute left-[13px] top-[15px] h-[39px] w-[36px] rounded-[45%] bg-[#e7ad91]" />
-                  <div className="absolute left-[11px] top-[8px] h-[20px] w-[40px] rounded-t-full bg-[#28151d]" />
-                  <span className="absolute left-[19px] top-[30px] h-[5px] w-[5px] rounded-full bg-[#76a77a] shadow-[9px_0_0_#76a77a]" />
-                  <span className="absolute left-[23px] top-[40px] h-[2px] w-[8px] rounded-full bg-[#9d5364]" />
-                  <span className="absolute left-[5px] top-[14px] h-[23px] w-[9px] rounded-full border-[3px] border-[#d68a9d] bg-[#351a27]" />
-                  <span className="absolute left-[44px] top-[14px] h-[23px] w-[9px] rounded-full border-[3px] border-[#d68a9d] bg-[#351a27]" />
-                  <div className="absolute left-[8px] top-[49px] h-[25px] w-[44px] rounded-t-xl border border-[#8b4659] bg-[#171016]" />
-                  <div className="absolute left-[1px] top-[1px] h-[18px] w-[16px] rounded-full bg-[#39202a] shadow-[13px_-4px_0_#39202a,27px_-2px_0_#39202a,39px_8px_0_#39202a,2px_20px_0_#39202a,39px_25px_0_#39202a]" />
-                  <span className="absolute -right-2 -top-3 font-mono text-[8px] text-[#e7a1b2]">♡</span>
+                <div className="relative h-[112px] w-[96px] sm:h-[148px] sm:w-[126px]">
+                  <svg viewBox="0 0 126 148" className="h-full w-full overflow-visible drop-shadow-[0_12px_18px_rgba(0,0,0,.55)]" role="img" aria-label="Retrato ilustrado de Lucía con pelo rizado castaño, ojos verdes y auriculares burdeos">
+                    <defs>
+                      <radialGradient id="skin" cx="42%" cy="34%" r="70%"><stop offset="0" stopColor="#ffd4b8"/><stop offset="1" stopColor="#bd7969"/></radialGradient>
+                      <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#704033"/><stop offset=".48" stopColor="#29171a"/><stop offset="1" stopColor="#120d12"/></linearGradient>
+                      <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#49303a"/><stop offset=".5" stopColor="#171219"/><stop offset="1" stopColor="#09080c"/></linearGradient>
+                      <linearGradient id="earcup" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#e59aaa"/><stop offset="1" stopColor="#682c43"/></linearGradient>
+                    </defs>
+                    <path d="M18 143 Q12 111 27 98 Q37 87 62 88 Q95 87 108 108 Q118 124 119 148Z" fill="url(#coat)" stroke="#8d5362" strokeWidth="1.2"/>
+                    <path d="M44 102 Q62 117 83 101 L93 119 Q68 139 34 119Z" fill="#21151d" stroke="#875064"/>
+                    <path d="M29 70 Q17 37 39 15 Q55 -3 82 10 Q111 18 111 53 Q119 78 98 104 Q91 120 73 118 L42 104Z" fill="url(#hair)"/>
+                    <path d="M35 46 Q27 20 51 12 Q73 -1 94 18 Q108 31 99 58 Q94 78 80 89 Q57 96 42 79Z" fill="url(#skin)" stroke="#a86d61" strokeWidth=".8"/>
+                    <path d="M34 44 Q27 14 56 8 Q84 -2 101 24 Q108 42 96 61 Q92 33 76 30 Q58 28 47 46 Q42 60 34 65Z" fill="url(#hair)"/>
+                    <path d="M34 24 Q21 13 28 3 Q42 -5 48 10 Q56 -2 67 4 Q78 -5 86 9 Q104 6 108 23 Q122 30 111 43 Q116 57 103 66 Q101 83 87 88 Q98 69 91 56 Q82 39 66 38 Q49 37 42 56 Q34 72 23 65 Q14 53 26 43 Q16 34 34 24Z" fill="url(#hair)"/>
+                    {[[31,19,12],[48,10,11],[67,9,12],[87,17,13],[105,31,10],[27,42,11],[102,52,12],[34,66,10],[91,72,13],[47,83,12],[75,88,11]].map(([x,y,r],i)=><circle key={i} cx={x} cy={y} r={r} fill="url(#hair)" stroke="#9a6049" strokeOpacity=".35" strokeWidth="1.4"/>)}
+                    <path d="M47 51 Q55 44 63 51" fill="none" stroke="#48272a" strokeWidth="2.5" strokeLinecap="round"/>
+                    <path d="M73 51 Q81 44 89 51" fill="none" stroke="#48272a" strokeWidth="2.5" strokeLinecap="round"/>
+                    <ellipse cx="56" cy="56" rx="5.5" ry="7" fill="#f5eee0"/><ellipse cx="81" cy="56" rx="5.5" ry="7" fill="#f5eee0"/>
+                    <ellipse cx="57" cy="57" rx="3.5" ry="5" fill="#668b57"/><ellipse cx="82" cy="57" rx="3.5" ry="5" fill="#668b57"/>
+                    <ellipse cx="58" cy="57" rx="1.8" ry="3.2" fill="#17221b"/><ellipse cx="83" cy="57" rx="1.8" ry="3.2" fill="#17221b"/>
+                    <circle cx="59" cy="55" r="1.2" fill="white"/><circle cx="84" cy="55" r="1.2" fill="white"/>
+                    <path d="M69 59 Q65 69 70 70" fill="none" stroke="#a96c61" strokeWidth="1.3" strokeLinecap="round"/>
+                    <path d="M64 78 Q71 83 79 77" fill="none" stroke="#9c4d5d" strokeWidth="1.8" strokeLinecap="round"/>
+                    <path d="M44 72 Q48 78 56 78 M84 77 Q91 74 94 68" fill="none" stroke="#e8a18f" strokeOpacity=".6" strokeWidth="2"/>
+                    <path d="M37 34 Q42 20 57 19 Q79 12 95 34" fill="none" stroke="#a66a4e" strokeOpacity=".55" strokeWidth="2"/>
+                    <path d="M25 39 Q17 52 28 67" fill="none" stroke="#d58a9d" strokeWidth="5" strokeLinecap="round"/>
+                    <path d="M24 39 Q17 52 28 67" fill="none" stroke="#57283c" strokeWidth="2" strokeLinecap="round"/>
+                    <rect x="17" y="44" width="13" height="27" rx="6.5" fill="url(#earcup)" stroke="#e8a0b2" strokeWidth="1.5"/>
+                    <circle cx="23.5" cy="57.5" r="3.2" fill="#f3c0ca" opacity=".85"/>
+                    <path d="M30 96 Q45 108 62 107 Q82 108 98 94" fill="none" stroke="#a96b7c" strokeOpacity=".7" strokeWidth="2"/>
+                    <path d="M52 112 L63 126 L75 112" fill="none" stroke="#b8798b" strokeWidth="1.2"/>
+                    <path d="M62 125 L67 132 L72 125" fill="none" stroke="#e2a0b0" strokeWidth="1.3"/>
+                  </svg>
+                  <span className="absolute -right-1 top-0 font-mono text-xs text-[#e7a1b2] drop-shadow">♡</span>
                 </div>
               </div>
 
