@@ -216,7 +216,11 @@ export default function ExperiencePage({ locale }: Props) {
                   );
                 })}
               </div>
-              <p className="mt-4 font-mono text-[9px] tracking-[.14em] text-white/25">{isSpanish ? "SELECCIONADO" : "SELECTED"} · {projects[activeProject].title}</p>
+              <div className="mt-5 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-4">
+                <p className="font-mono text-[9px] tracking-[.14em] text-white/35">{isSpanish ? "SELECCIONADO" : "SELECTED"} · {projects[activeProject].title}</p>
+                {activeProject === 1 && <a href="https://noayounes.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[.18em] text-[#d4aab2] transition hover:text-white">{isSpanish ? "Visitar proyecto en directo" : "Visit live project"} <span aria-hidden="true">↗</span></a>}
+                {activeProject === 0 && <span className="font-mono text-[9px] tracking-[.12em] text-white/25">{isSpanish ? "PROYECTO EN DESARROLLO" : "IN DEVELOPMENT"}</span>}
+              </div>
             </div>
           )}
 
@@ -259,6 +263,11 @@ export default function ExperiencePage({ locale }: Props) {
 
       <style jsx global>{`
         @keyframes fadeIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes sceneReveal { from { opacity: 0; transform: translate3d(0, 18px, 0) scale(.992); filter: blur(5px); } to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); filter: blur(0); } }
+        @keyframes orbitDrift { from { transform: translate(-50%, -50%) rotate(0deg) scale(1); } to { transform: translate(-50%, -50%) rotate(360deg) scale(1.025); } }
+        section[aria-live] > div { animation: sceneReveal .75s cubic-bezier(.2,.7,.2,1) both; }
+        .cinematic-orbit { animation: orbitDrift 90s linear infinite; }
+        .cinematic-orbit-delayed { animation-duration: 130s; animation-direction: reverse; }
         @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
       `}</style>
     </main>
