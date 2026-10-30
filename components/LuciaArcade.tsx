@@ -103,25 +103,25 @@ export default function LuciaArcade() {
                       <linearGradient id="headphone" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#f0b1bd"/><stop offset=".5" stopColor="#a65370"/><stop offset="1" stopColor="#54243a"/></linearGradient>
                       <filter id="soft"><feGaussianBlur stdDeviation="2"/></filter>
                     </defs>
-                    <!-- shoulders and jacket -->
+                    {/* shoulders and jacket */}
                     <path d="M19 187 Q18 153 34 137 Q48 125 67 124 L96 124 Q125 131 139 151 Q148 168 150 190Z" fill="url(#jacket)" stroke="#a36578" strokeWidth="1.5"/>
                     <path d="M57 132 Q79 149 105 132 L124 157 Q103 177 82 180 Q58 169 39 157Z" fill="#21151e" stroke="#815064" strokeWidth="1.2"/>
                     <path d="M69 137 L83 163 L98 138 M83 163 L91 174" fill="none" stroke="#c18498" strokeWidth="1.5" strokeLinecap="round"/>
                     <path d="M69 113 L67 137 Q81 148 98 136 L94 111Z" fill="url(#skin)"/>
-                    <!-- hair mass behind face -->
+                    {/* hair mass behind face */}
                     <path d="M35 79 Q20 50 39 25 Q53 4 81 7 Q115 3 133 30 Q151 54 136 91 Q144 119 119 143 Q98 160 63 146 Q33 138 25 111Z" fill="url(#hair)" stroke="#9a624b" strokeWidth="1.4"/>
-                    <!-- face -->
+                    {/* face */}
                     <path d="M48 56 Q54 28 84 27 Q117 28 123 61 L119 101 Q113 129 86 137 Q58 132 47 105Z" fill="url(#skin)" stroke="#b47b6c" strokeWidth="1.1"/>
                     <path d="M48 88 Q43 108 59 124 Q71 137 88 138 Q111 130 120 107 Q112 132 91 143 Q64 143 48 122 Q36 106 48 88Z" fill="#5b302b" opacity=".42"/>
-                    <!-- curls: connected organic silhouette, not bead-like circles -->
+                    {/* curls: connected organic silhouette, not bead-like circles */}
                     <path d="M34 65 Q17 52 29 35 Q19 17 41 13 Q45 -1 64 8 Q78 -4 91 8 Q110 0 119 18 Q143 17 141 39 Q155 53 137 69 Q147 85 132 99 Q127 82 116 72 Q121 49 101 37 Q82 23 64 39 Q49 49 48 73 Q39 83 34 65Z" fill="url(#hair)" stroke="#a66b50" strokeWidth="1.4"/>
                     <path d="M31 38 Q21 23 39 16 Q50 8 57 23 Q61 7 78 12 Q90 5 99 21 Q116 11 126 28 Q143 34 132 51 Q143 63 128 76" fill="none" stroke="url(#hairLight)" strokeWidth="5" strokeLinecap="round" opacity=".78"/>
                     <path d="M38 87 Q25 77 33 63 Q24 51 38 43 M47 23 Q43 14 54 12 M72 18 Q78 8 87 17 M104 27 Q117 17 126 34 M130 54 Q141 61 130 73" fill="none" stroke="#c18a68" strokeWidth="2.2" strokeLinecap="round" opacity=".55"/>
                     <path d="M39 91 Q27 104 40 119 Q46 132 60 130 M119 91 Q135 101 126 119 Q119 132 107 137" fill="none" stroke="#8e5945" strokeWidth="7" strokeLinecap="round"/>
-                    <!-- loose curls framing cheeks -->
+                    {/* loose curls framing cheeks */}
                     <path d="M42 104 Q29 96 33 84 Q38 74 48 81 Q56 89 49 101 Q45 109 42 104Z" fill="url(#hair)" stroke="#9c634d" strokeWidth="1.3"/>
                     <path d="M119 105 Q133 93 139 105 Q143 119 130 126 Q118 129 115 118Z" fill="url(#hair)" stroke="#9c634d" strokeWidth="1.3"/>
-                    <!-- brows and eyes -->
+                    {/* brows and eyes */}
                     <path d="M55 72 Q66 64 76 72 M91 71 Q103 63 113 71" fill="none" stroke="#56332d" strokeWidth="3" strokeLinecap="round"/>
                     <path d="M54 81 Q65 73 77 81 Q66 94 55 81Z M91 80 Q103 72 114 80 Q103 93 91 80Z" fill="#fff4e9" stroke="#8d6258" strokeWidth="1"/>
                     <ellipse cx="66" cy="82" rx="5.1" ry="6.4" fill="#6f9666"/><ellipse cx="103" cy="81" rx="5.1" ry="6.4" fill="#6f9666"/>
@@ -131,13 +131,13 @@ export default function LuciaArcade() {
                     <path d="M74 114 Q85 121 98 113" fill="none" stroke="#9e5260" strokeWidth="2.1" strokeLinecap="round"/>
                     <path d="M77 116 Q86 119 94 115" fill="none" stroke="#f4c2b0" strokeWidth=".8" strokeLinecap="round"/>
                     <ellipse cx="55" cy="104" rx="8" ry="4" fill="#d98283" opacity=".24" filter="url(#soft)"/><ellipse cx="111" cy="103" rx="8" ry="4" fill="#d98283" opacity=".24" filter="url(#soft)"/>
-                    <!-- burgundy over-ear headphones -->
+                    {/* burgundy over-ear headphones */}
                     <path d="M38 80 Q26 35 65 19 Q103 2 128 40 Q136 52 132 77" fill="none" stroke="#57283e" strokeWidth="9" strokeLinecap="round"/>
                     <path d="M38 80 Q26 35 65 19 Q103 2 128 40 Q136 52 132 77" fill="none" stroke="#d58a9d" strokeWidth="2.1" strokeLinecap="round" opacity=".8"/>
                     <rect x="27" y="77" width="18" height="39" rx="9" fill="url(#headphone)" stroke="#f0b0c0" strokeWidth="1.8"/>
                     <rect x="31" y="83" width="10" height="27" rx="5" fill="#f4c2cd" opacity=".52"/>
                     <circle cx="36" cy="96" r="3.6" fill="#ffe0e5"/>
-                    <!-- subtle hair shine -->
+                    {/* subtle hair shine */}
                     <path d="M53 31 Q66 18 82 22 M111 36 Q124 44 123 58" fill="none" stroke="#d19a75" strokeWidth="1.4" strokeLinecap="round" opacity=".45"/>
                     <path d="M134 15 Q140 8 146 15 Q140 22 134 15Z" fill="#e6a0b0" opacity=".9"/>
                   </svg>
