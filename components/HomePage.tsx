@@ -6,6 +6,7 @@ import { education } from "@/data/education";
 import { projects } from "@/data/projects";
 import { getTranslations, type Locale } from "@/i18n";
 import { localizedContent } from "@/data/localizedContent";
+import LuciaArcade from "@/components/LuciaArcade";
 
 type HomePageProps = {
   locale?: Locale;
@@ -517,6 +518,8 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
         </div>
 
       </section>
+
+      <LuciaArcade />
 
       {/* =====================================================
           PROJECTS
