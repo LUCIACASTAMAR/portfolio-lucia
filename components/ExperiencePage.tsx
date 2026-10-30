@@ -113,9 +113,6 @@ export default function ExperiencePage({ locale }: Props) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [locale, next]);
 
-  const project = projects[activeProject];
-  const projectCopy = content.projects[project.slug];
-
   return (
     <main className="relative min-h-[100svh] overflow-hidden bg-[#050505] text-[#f4f1ee] selection:bg-[#9c5968] selection:text-white">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -248,7 +245,7 @@ export default function ExperiencePage({ locale }: Props) {
             <div className="flex items-center gap-3">
               <button onClick={() => setScene((current) => Math.max(0, current - 1))} disabled={scene === 0} className="border border-white/15 px-4 py-3 text-[9px] uppercase tracking-[.15em] text-white/55 transition hover:border-white/40 disabled:opacity-20">{t.previous}</button>
               {scene > 0 && scene < 5 && <button onClick={() => setPlaying((value) => !value)} className="border border-white/15 px-4 py-3 text-[9px] uppercase tracking-[.15em] text-white/55 transition hover:border-white/40">{playing ? "Ⅱ " + t.pause : "▶ " + t.play}</button>}
-              {scene === 5 && <button onClick={() => { setScene(0); setPlaying(false); setStarted(false); }} className="border border-white/15 px-4 py-3 text-[9px] uppercase tracking-[.15em] text-white/55 transition hover:border-white/40"}>{t.restart}</button>}
+              {scene === 5 && <button onClick={() => { setScene(0); setPlaying(false); setStarted(false); }} className="border border-white/15 px-4 py-3 text-[9px] uppercase tracking-[.15em] text-white/55 transition hover:border-white/40">{t.restart}</button>}
             </div>
             <div className="flex items-center gap-4">
               <div className="h-px w-24 overflow-hidden bg-white/15 sm:w-40"><div className="h-full bg-[#bd8792] transition-all duration-700" style={{ width: `${((scene + 1) / 6) * 100}%` }} /></div>
