@@ -166,13 +166,6 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
             </a>
 
             <a
-              href={`/${locale}/experience`}
-              className="text-[#D5A6B4] transition-colors hover:text-white"
-            >
-              EXPERIENCE ↗
-            </a>
-
-            <a
               href="#education"
               className="transition-colors hover:text-white"
             >
