@@ -519,7 +519,7 @@ export default function HomePage({ locale = "es" }: HomePageProps) {
 
       </section>
 
-      <LuciaArcade locale={locale} />
+      <LuciaArcade />
 
       {/* =====================================================
           PROJECTS
